@@ -6,11 +6,20 @@
 // solve it using javascript
 
 const arr=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
-let sum=0;
-console.log(arr.map(findoccurence));
-function findoccurence(n){
-    if(arr[n]==arr[n+1]){
-        return sum+=1;
+let obj={};
+let count=0;
+let max=0;
+let mostoccurenceelement=0;
+arr.forEach(element => {
+    if (obj[element] === undefined) {
+        obj[element] = 1;
+    } else {
+        obj[element]++;
     }
-    n++
-}
+    if (obj[element] > max) {
+        max = obj[element];
+        mostoccurenceelement = element;
+    }
+});
+console.log(mostoccurenceelement+" occurs "+max+" times");
+
