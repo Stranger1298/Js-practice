@@ -8,9 +8,23 @@
 
 const arr1=[1, 2, 3];
 const arr2=[2, 30, 1];
+let arr3=[];
 function mergearray(arr1,arr2){
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-        
+   arr1.forEach(i => {
+    if (arr3[i]==undefined) {
+        arr3.push(i);
     }
+       });
+
+    arr2.forEach(j => {
+        if(arr3.includes(j))
+            return arr3;
+        else{
+            arr3.push(j);
+        } 
+   });
+
+   
+   console.log(arr3);
 }
+mergearray(arr1,arr2);
