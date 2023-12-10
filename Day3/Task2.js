@@ -3,17 +3,10 @@
 // if you accept 025468 the output should be 0-254-6-8.
 
 
-let n="025468";
-let map=n.split("");
-function add_dash(map){
-    map.forEach(element => {
-        if (element%2!=0) {
-            map.shift(element);
-        }
-        // else{
-        //     map.push("-");
-        // };
-    });
-    console.log(map);
+let n='025468';
+let arr=n.split(" ");
+let result='';
+function add_dash(arr){
+    
 }
-add_dash(map);
+add_dash(arr);
